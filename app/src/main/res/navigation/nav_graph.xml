@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.abduvali.fightagainstcorruption.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_testsFragment"
+            app:destination="@id/testsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookmarksFragment"
+            app:destination="@id/bookmarksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testsFragment"
+        android:name="uz.abduvali.fightagainstcorruption.fragments.TestsFragment"
+        android:label="fragment_tests"
+        tools:layout="@layout/fragment_tests" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="uz.abduvali.fightagainstcorruption.fragments.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_newDataFragment"
+            app:destination="@id/newDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDataFragment"
+        android:name="uz.abduvali.fightagainstcorruption.fragments.NewDataFragment"
+        android:label="NewDataFragment"
+        tools:layout="@layout/fragment_new_data" />
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="uz.abduvali.fightagainstcorruption.fragments.BookmarksFragment"
+        android:label="fragment_bookmarks"
+        tools:layout="@layout/fragment_bookmarks" >
+        <action
+            android:id="@+id/action_bookmarksFragment_to_newDataFragment"
+            app:destination="@id/newDataFragment" />
+    </fragment>
+</navigation>
